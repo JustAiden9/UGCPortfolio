@@ -3,33 +3,45 @@
 import { motion, useScroll, useTransform } from 'motion/react';
 import { useRef } from 'react';
 import Image from 'next/image';
+import { Play } from 'lucide-react';
 
 const projects = [
   {
-    brand: "Apple",
-    category: "Tech",
-    image: "https://picsum.photos/seed/apple/800/1200", // Placeholder
+    brand: "View Instagram",
+    category: "Reel",
+    image: "/photos/TT1.jpg",
+    link: "https://www.instagram.com/reel/DXXWzu3DSZd/?igsh=bzhmZ3dlaGdpcjFt",
   },
   {
-    brand: "Nike",
-    category: "Lifestyle",
-    image: "https://picsum.photos/seed/nike/800/1200",
+    brand: "View TikTok",
+    category: "Campaign",
+    image: "/photos/TT2.jpg",
+    link: "https://www.tiktok.com/t/ZP8g4dfNp/",
   },
   {
-    brand: "Olipop",
-    category: "CPG",
-    image: "https://picsum.photos/seed/olipop/800/1200",
+    brand: "View TikTok",
+    category: "Native",
+    image: "/photos/TT3.jpg",
+    link: "https://www.tiktok.com/t/ZP8g4Rtc9/",
   },
   {
-    brand: "Dyson",
-    category: "Home Tech",
-    image: "https://picsum.photos/seed/dyson/800/1200",
+    brand: "View TikTok",
+    category: "Viral",
+    image: "/photos/TT4.jpg",
+    link: "https://www.tiktok.com/t/ZP8g4JsFM/",
   },
   {
-    brand: "Ridge",
-    category: "Accessories",
-    image: "https://picsum.photos/seed/ridge/800/1200",
+    brand: "View Instagram",
+    category: "Campaign",
+    image: "/photos/TT5.jpg",
+    link: "https://www.instagram.com/reel/DXEuUDcDZU8/?igsh=ZWN6OGc1ZHo2NXY=",
   },
+  {
+    brand: "View Instagram",
+    category: "Reel",
+    image: "/photos/TT6.jpg",
+    link: "https://www.instagram.com/reel/DXEeCNwDgHM/?igsh=bGpoenY0d3J5bzZm"
+  }
 ];
 
 export default function WorkReel() {
@@ -71,9 +83,12 @@ export default function WorkReel() {
         {/* The scrolling track */}
         <motion.div style={{ x }} className="flex gap-6 md:gap-8 px-6 md:px-12 w-max">
           {projects.map((project, i) => (
-            <div 
+            <a 
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
               key={i} 
-              className="relative w-[75vw] sm:w-[400px] h-[55vh] md:h-[600px] rounded-[2rem] overflow-hidden group shrink-0 glass-panel shadow-xl shadow-blue-500/10"
+              className="relative w-[75vw] sm:w-[400px] h-[55vh] md:h-[600px] rounded-[2rem] overflow-hidden group shrink-0 glass-panel shadow-xl shadow-blue-500/10 block"
             >
               <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60" />
               <Image 
@@ -82,24 +97,15 @@ export default function WorkReel() {
                 fill
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 referrerPolicy="no-referrer"
+                unoptimized
               />
-              <div className="absolute bottom-0 left-0 right-0 p-8 z-20 flex justify-between items-end">
-                <div>
-                  <div className="text-white/80 text-xs font-bold tracking-widest uppercase mb-1 drop-shadow-md">
-                    {project.category}
-                  </div>
-                  <div className="text-white text-3xl font-editorial drop-shadow-md">
-                    {project.brand}
-                  </div>
-                </div>
+              <div className="absolute bottom-0 left-0 right-0 p-8 z-20 flex justify-end items-end">
                 {/* Play button hint */}
-                <div className="w-12 h-12 rounded-full glass flex items-center justify-center text-white backdrop-blur-md hover:bg-white/30 transition-colors">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
+                <div className="w-12 h-12 rounded-full glass flex items-center justify-center text-white backdrop-blur-md group-hover:bg-white/30 transition-colors">
+                  <Play fill="currentColor" strokeWidth={1.5} size={26} className="ml-1" />
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </motion.div>
       </div>

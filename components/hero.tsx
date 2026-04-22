@@ -1,7 +1,6 @@
 'use client';
 
 import { motion, Variants } from 'motion/react';
-import { ArrowDown } from 'lucide-react';
 
 export default function Hero() {
   const headlineWords = "Content that converts.".split(" ");
@@ -52,8 +51,8 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 1.2, ease: "easeOut" }}
           className="text-lg md:text-xl text-gray-700/90 font-medium max-w-2xl mb-12"
         >
-          I&apos;m Aiden Baker. I craft Gen-Z focused UGC that feels native, 
-          holds attention, and drives measurable revenue for modern brands.
+          I&apos;m Aiden Baker. I create UGC content that feels native, 
+          holds attention, and drives measurable revenue for modern brands. Not just an ad.
         </motion.p>
 
         <motion.div
@@ -70,21 +69,6 @@ export default function Hero() {
           </a>
         </motion.div>
       </div>
-
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 2, duration: 1 }}
-        className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-500"
-      >
-        <span className="text-sm font-medium tracking-wide uppercase">Scroll</span>
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-        >
-          <ArrowDown size={18} />
-        </motion.div>
-      </motion.div>
     </section>
   );
 }

@@ -21,11 +21,12 @@ export default function About() {
           <div className="w-full lg:w-5/12 relative">
             <div className="aspect-[4/5] w-full relative rounded-2xl overflow-hidden glass shadow-2xl">
               <Image 
-                src="https://picsum.photos/seed/aiden/800/1000" // Replace with actual photo
+                src="/photos/aidenbaker.png"
                 alt="Aiden Baker"
                 fill
                 className="object-cover"
                 referrerPolicy="no-referrer"
+                unoptimized
               />
             </div>
             
@@ -36,8 +37,8 @@ export default function About() {
               transition={{ delay: 0.4, type: "spring" }}
               className="absolute -bottom-8 -right-8 md:-right-12 glass-panel p-6 rounded-2xl transform rotate-3"
             >
-              <div className="font-bold text-lg leading-tight mb-1">Founder @ Holdmate</div>
-              <div className="text-sm text-gray-500 font-medium">Built a brand from scratch.</div>
+              <div className="font-bold text-lg leading-tight mb-1">Content Manager @ Holdmate</div>
+              <div className="text-sm text-gray-500 font-medium">MagSafe retainer cases.</div>
             </motion.div>
           </div>
 
@@ -48,13 +49,13 @@ export default function About() {
             </h2>
             <div className="space-y-6 text-lg text-gray-700 leading-relaxed font-medium">
               <p>
-                I’m not just a hired talent reading a script. I’m an 18-year-old entrepreneur who understands the mechanics of grabbing attention and converting it into revenue.
+                I’m not just a hired talent reading a script. I’m an 18-year-old entrepreneur and strategist who understands the mechanics of grabbing attention and converting it into revenue.
               </p>
               <p>
-                Before creating content for other brands, I co-founded <strong className="text-gray-900 border-b border-gray-300">Holdmate</strong>, an original manufacturing brand. We built it from nothing, generating millions of organic views and turning virality into a physical business.
+                Currently, I am the Co-Founder and Content Manager for <a href="https://holdmate.net" target="_blank" rel="noopener noreferrer" className="font-bold text-gray-900 border-b-2 border-blue-500 hover:text-blue-600 transition-colors">Holdmate</a>, a MagSafe retainer case brand. We built it from nothing, generating millions of organic views and turning virality into a physical business.
               </p>
               <p>
-                I bring that exact founder mentality to every UGC project. I know what return on ad spend means, and I know how to make creatives that perform aggressively against your KPIs.
+                In my role, I don't just film a bunch of videos myself. I oversee the overarching content strategy, script the funnels, manage other creators, and build a pipeline designed to actually sell. I bring that exact strategic mentality to every project I take on.
               </p>
             </div>
 

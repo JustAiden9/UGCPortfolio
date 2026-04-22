@@ -5,9 +5,9 @@ import { Smartphone, Coffee, Package, ShoppingBag } from 'lucide-react';
 
 const niches = [
   {
-    title: "Tech & Gadgets",
+    title: "Digital Products & AI",
     icon: Smartphone,
-    description: "Highly technical products explained simply, paired with crisp visuals and rapid pacing."
+    description: "SaaS, AI brands, and digital tools. I create high-converting screen recordings and tutorials that make software look sleek and effortless."
   },
   {
     title: "Lifestyle & Wellness",

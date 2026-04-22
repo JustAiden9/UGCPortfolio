@@ -4,7 +4,7 @@ import Navbar from '@/components/navbar';
 import Footer from '@/components/footer';
 
 export const metadata: Metadata = {
-  title: 'aidenpicks | Content that converts.',
+  title: 'Aiden Baker | Content that converts.',
   description: 'UGC creator portfolio for Aiden Baker. Gen Z-focused, high-converting content.',
 };
 

@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'motion/react';
-import { ArrowRight, Instagram, Twitter, Mail } from 'lucide-react';
+import { ArrowRight, Instagram, Linkedin } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -33,22 +33,24 @@ export default function Footer() {
           </a>
         </motion.div>
 
-        <div className="w-full flex flex-col md:flex-row justify-between items-center gap-6 border-t border-gray-300/30 pt-12">
-          <div className="text-xl font-bold tracking-tight">aidenpicks</div>
+        <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-6 items-center border-t border-gray-300/30 pt-12">
+          <div className="text-xl font-bold tracking-tight text-center md:text-left">Aiden Baker</div>
           
-          <div className="flex gap-6">
-            <a href="#" className="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-gray-100 transition-colors">
+          <div className="flex justify-center gap-6">
+            <a href="https://www.instagram.com/aiden.rn" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-gray-100 transition-colors">
               <Instagram size={20} />
             </a>
-            <a href="#" className="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-gray-100 transition-colors">
-              <Twitter size={20} />
+            <a href="https://www.tiktok.com/@aidenpicks" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-gray-100 transition-colors">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 15.68a6.34 6.34 0 0 0 6.27 6.36 6.34 6.34 0 0 0 6.25-6.36V7.98a8.1 8.1 0 0 0 4.8 1.53V6.09a5 5 0 0 1-2.73-.93Z" />
+              </svg>
             </a>
-            <a href="#" className="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-gray-100 transition-colors">
-              <Mail size={20} />
+            <a href="https://www.linkedin.com/in/aidenbaker9/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-gray-100 transition-colors">
+              <Linkedin size={20} />
             </a>
           </div>
 
-          <div className="text-sm font-medium text-gray-500">
+          <div className="text-sm font-medium text-gray-500 text-center md:text-right">
             © {new Date().getFullYear()} Aiden Baker. All rights reserved.
           </div>
         </div>

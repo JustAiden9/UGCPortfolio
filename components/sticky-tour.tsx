@@ -10,25 +10,29 @@ const features = [
     id: "script",
     title: "Script-First Approach",
     description: "Every second counts. I write tight, hook-optimized scripts based on direct response marketing principles. It's not just a video; it's a funnel.",
-    image: "https://picsum.photos/seed/script/800/1000",
+    image: "/photos/TOUR1.jpg",
+    link: "https://www.tiktok.com/t/ZTkxk8NFP/",
   },
   {
     id: "delivery",
     title: "Natural Delivery",
-    description: "Gen Z can smell an ad from a mile away. My delivery is authentic, fast-paced, and seamlessly native to the platform's organic feed.",
-    image: "https://picsum.photos/seed/delivery/800/1000",
+    description: "My friends can smell an ad from a mile away. My delivery is authentic, fast-paced, and seamlessly native to the platform's organic feed.",
+    image: "/photos/TOUR2.jpg",
+    link: "https://www.tiktok.com/t/ZP8g4MG3u/",
   },
   {
     id: "editing",
     title: "Hook-Optimized Editing",
     description: "Relentless pacing. Sound design. Dynamic punch-ins. The editing is deliberately crafted to reset audience attention every 3 seconds.",
-    image: "https://picsum.photos/seed/editing/800/1000",
+    image: "/photos/TOUR3.jpg",
+    link: "https://www.instagram.com/reel/DW4dKWWjSUy/?igsh=Z3R0ejk0Y2pzZjc5",
   },
   {
     id: "safe",
     title: "Brand-Safe Results",
     description: "Premium aesthetics combined with UGC authenticity. The final deliverables are polished, compliant, and ready to scale aggressively.",
-    image: "https://picsum.photos/seed/safe/800/1000",
+    image: "/photos/TOUR4.jpg",
+    link: "https://www.tiktok.com/t/ZP8g4Db6T/",
   }
 ];
 
@@ -75,7 +79,10 @@ export default function StickyTour() {
         <div className="w-full max-w-[450px] aspect-[9/16] relative rounded-[2rem] overflow-hidden glass-panel shadow-2xl p-2 bg-white/40">
           <div className="w-full h-full relative rounded-3xl overflow-hidden bg-black">
              {features.map((feature, idx) => (
-                <motion.div
+                <motion.a
+                  href={feature.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   key={feature.id}
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ 
@@ -84,23 +91,24 @@ export default function StickyTour() {
                     zIndex: activeFeature === idx ? 10 : 0
                   }}
                   transition={{ duration: 0.5, ease: "easeOut" }}
-                  className="absolute inset-0"
+                  className="absolute inset-0 block group"
                 >
                   <Image 
                     src={feature.image} 
                     alt={feature.title} 
                     fill 
-                    className="object-cover opacity-80 mix-blend-luminosity hover:mix-blend-normal transition-all duration-700" 
+                    className="object-cover opacity-80 mix-blend-luminosity group-hover:mix-blend-normal transition-all duration-700" 
                     referrerPolicy="no-referrer"
+                    unoptimized
                   />
                   {activeFeature === idx && (
-                    <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
-                      <div className="w-16 h-16 rounded-full glass flex items-center justify-center text-white backdrop-blur-md">
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                      <div className="w-16 h-16 rounded-full glass flex items-center justify-center text-white backdrop-blur-md transition-transform group-hover:scale-110">
                         <Play fill="currentColor" size={24} className="ml-1" />
                       </div>
                     </div>
                   )}
-                </motion.div>
+                </motion.a>
              ))}
           </div>
         </div>
@@ -125,15 +133,26 @@ function FeatureText({ feature, index, setActiveFeature }: { feature: any, index
       <p className="text-lg text-gray-700 leading-relaxed max-w-md">{feature.description}</p>
       
       {/* Mobile media inline */}
-      <div className="md:hidden mt-8 w-full aspect-[4/5] relative rounded-2xl overflow-hidden shadow-lg border border-white/20">
+      <a 
+        href={feature.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="md:hidden mt-8 w-full aspect-[4/5] relative rounded-2xl overflow-hidden shadow-lg border border-white/20 block group"
+      >
         <Image 
           src={feature.image} 
           alt={feature.title} 
           fill 
-          className="object-cover" 
+          className="object-cover transition-transform duration-700 group-hover:scale-105" 
           referrerPolicy="no-referrer"
+          unoptimized
         />
-      </div>
+        <div className="absolute inset-0 flex items-center justify-center bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity">
+          <div className="w-16 h-16 rounded-full glass flex items-center justify-center text-white backdrop-blur-md">
+            <Play fill="currentColor" size={24} className="ml-1" />
+          </div>
+        </div>
+      </a>
     </div>
   );
 }
