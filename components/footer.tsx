@@ -27,7 +27,7 @@ export default function Footer() {
            transition={{ duration: 0.8, delay: 0.2 }}
            className="mb-32"
         >
-          <a href="mailto:contact@aidenbaker.com" className="btn btn-blue text-lg px-8 py-4 rounded-2xl group">
+          <a href="mailto:ugcbyaidenb@gmail.com" className="btn btn-blue text-lg px-8 py-4 rounded-2xl group">
             Book your campaign
             <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
           </a>
