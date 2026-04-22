@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@theme {
+  --font-editorial: "Times New Roman", Times, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /* Linear gradient from blue to white. Fixed so it doesn't repeat on scroll */
+  background: linear-gradient(160deg, #4a8fdc 0%, #e6eff8 40%, #ffffff 100%);
+  background-attachment: fixed;
+  color: #111827;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Glass styling utilities */
+.glass {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 32px 0 rgba(74, 143, 220, 0.05);
+}
+
+.font-editorial {
+  font-family: "Times New Roman", Times, serif;
+}
+
+/* Base button and Liquid Glass logic from prompt */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 0.95rem;
+    position: relative;
+    border: 1px solid transparent; 
+}
+
+.btn-blue {
+    background: linear-gradient(180deg, #5a99ff 0%, #3b82f6 100%);
+    color: white;
+    border-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 
+        inset 0px 1px 1px rgba(255, 255, 255, 0.4),
+        inset 0px -2px 4px rgba(0, 0, 0, 0.1),
+        0px 6px 16px rgba(59, 130, 246, 0.25);
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.btn-blue:hover {
+    background: linear-gradient(180deg, #6ea5ff 0%, #4a8df7 100%);
+    box-shadow: 
+        inset 0px 1px 1px rgba(255, 255, 255, 0.5),
+        inset 0px -2px 4px rgba(0, 0, 0, 0.1),
+        0px 8px 20px rgba(59, 130, 246, 0.35);
+    transform: translateY(-1px);
+}
+
+.btn-blue:active {
+    transform: translateY(1px);
+    box-shadow: 
+        inset 0px 1px 3px rgba(0, 0, 0, 0.1),
+        0px 2px 8px rgba(59, 130, 246, 0.15);
+}
+
+.btn-dark {
+    background: linear-gradient(180deg, #374151 0%, #1f2937 100%);
+    color: white;
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 
+        inset 0px 1px 1px rgba(255, 255, 255, 0.15),
+        inset 0px -2px 4px rgba(0, 0, 0, 0.2),
+        0px 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.btn-dark:hover {
+    background: linear-gradient(180deg, #4b5563 0%, #273445 100%);
+    box-shadow: 
+        inset 0px 1px 1px rgba(255, 255, 255, 0.2),
+        inset 0px -2px 4px rgba(0, 0, 0, 0.2),
+        0px 8px 20px rgba(0, 0, 0, 0.25);
+    transform: translateY(-1px);
+}
+
+.btn-dark:active {
+    transform: translateY(1px);
+    box-shadow: 
+        inset 0px 1px 3px rgba(0, 0, 0, 0.3),
+        0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
